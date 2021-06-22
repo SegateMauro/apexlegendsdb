@@ -1,23 +1,10 @@
-<h1>Blog</h1>
+<h1>Home Page</h1>
 
-{{ name }}
-
-<ol>
-{% for item in lista_tecnologias %}
-
-    {% if item == 'Django' %}
-        <li><b>{{ item }}</b></li>
-    {% else %}
-        <li>{{ item }}</li>
-    {% endif %}
-    
-{% endfor %}
-</ol>
+{{ views_post }}
 
 <ul>
-{% for post in posts %}
-    <h2>{{ post.title }}</h2>
-    <h3>{{ post.sub_title}}</h3>
-    <p>{{ post.content }}</p>
+{% for i in ceps %}
+    <h4>{{ i.nome }}</h4>
+    <h4>{{ i.cep }}</h4>    
 {% endfor %}
 </ul>

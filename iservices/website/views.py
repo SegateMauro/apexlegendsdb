@@ -1,29 +1,21 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import Post
-from .models import Home
+from .models import cep_big_users, Post
 
 
-def hello_blog(request):
-    lista = [
-        'Django', 'Python', 'Git', 'Html', 
-        'Banco de Dados', 'Linux', 'Nginex', 'Uwsgi',
-        'Systemctl'    
-    ]
-    list_posts = Post.objects.all()
+def views_cep(request):
+    list_uf = cep_big_users.objects.all()
 
     data = {
-        'name': 'Curso de Django 3',
-        'lista_tecnologias': lista, 
-        'posts': list_posts 
+        'ceps': list_uf,
         }
 
     return render(request, 'index.html', data)
 
-def home(request):
-    list_homes = Home.objects.all()
-
+def views_post(request):
     data = {
-        'homes': list_homes
+        'posts' : Post.Rua,
     }
 
-    return render(request, 'home.html', data )
+    return render(request, 'index.html', data)
+

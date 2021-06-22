@@ -1,8 +1,6 @@
 from django.urls import path, include
-from .views import hello_blog
-from .views import home
+from .views import views_cep
 
 urlpatterns = [
-    path('', home),
-    path('hello_blog/', hello_blog)
+    path('', views_cep),
 ]

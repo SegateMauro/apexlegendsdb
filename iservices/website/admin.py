@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Post
-from .models import Home
+from .models import cep_big_users, Post
+
 
 
 admin.site.register(Post)
-admin.site.register(Home)
+admin.site.register(cep_big_users)
 
 
